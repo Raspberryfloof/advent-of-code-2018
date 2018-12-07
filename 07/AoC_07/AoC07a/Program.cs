@@ -11,7 +11,7 @@ namespace AoC07a
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }

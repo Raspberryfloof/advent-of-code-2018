@@ -11,7 +11,7 @@ namespace AoC06b
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -95,7 +95,7 @@ namespace AoC06b
                     }
                 }
 
-                Console.WriteLine(string.Format("Total area under 10000 units from all points: {0}{1}", area, Environment.NewLine));
+                Console.WriteLine("Total area under 10000 units from all points: {0}{1}", area, Environment.NewLine);
                 Environment.Exit(0);
             }
             catch (Exception ex)

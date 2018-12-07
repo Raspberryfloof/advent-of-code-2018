@@ -11,7 +11,7 @@ namespace AoC05b
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -50,7 +50,7 @@ namespace AoC05b
 
                 for (char c = 'a'; c <= 'z'; c++)
                 {
-                    Console.WriteLine(string.Format("Testing with {0} removed:", c));
+                    Console.WriteLine("Testing with {0} removed:", c);
                     Regex charRemover = new Regex(string.Format("{0}|{1}", c, c.ToString().ToUpper()));
                     finalPolymer = charRemover.Replace(initialPolymer, "");
                     do
@@ -59,7 +59,7 @@ namespace AoC05b
                         finalPolymer = loupRegex.Replace(input, "");
                         finalPolymer = uploRegex.Replace(finalPolymer, "");
                     } while (finalPolymer != input);
-                    Console.WriteLine(string.Format("Polymer length: {0}", finalPolymer.Length));
+                    Console.WriteLine("Polymer length: {0}", finalPolymer.Length);
                     if (finalPolymer.Length < bestPolymer.Length)
                     {
                         bestPolymer = finalPolymer;
@@ -67,9 +67,9 @@ namespace AoC05b
                     }
                 }
 
-                Console.WriteLine(string.Format("Best polymer:{0}{1}{2}", Environment.NewLine, bestPolymer, Environment.NewLine));
-                Console.WriteLine(string.Format("Removed unit: {0}{1}", bestCharacter, Environment.NewLine));
-                Console.WriteLine(string.Format("Best polymer length: {0}{1}", bestPolymer.Length, Environment.NewLine));
+                Console.WriteLine("Best polymer:{0}{1}{2}", Environment.NewLine, bestPolymer, Environment.NewLine);
+                Console.WriteLine("Removed unit: {0}{1}", bestCharacter, Environment.NewLine);
+                Console.WriteLine("Best polymer length: {0}{1}", bestPolymer.Length, Environment.NewLine);
                 Environment.Exit(0);
             }
             catch (Exception ex)

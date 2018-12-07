@@ -12,7 +12,7 @@ namespace AoC03b
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -67,14 +67,14 @@ namespace AoC03b
                         }
                     }
 
-                    Console.WriteLine(string.Format("Claim #{0} @ {1},{2}: {3}x{4}", thisClaim.Key, thisClaim.Value.x, thisClaim.Value.y, thisClaim.Value.width, thisClaim.Value.height));
+                    Console.WriteLine("Claim #{0} @ {1},{2}: {3}x{4}", thisClaim.Key, thisClaim.Value.x, thisClaim.Value.y, thisClaim.Value.width, thisClaim.Value.height);
                 }
 
                 foreach (KeyValuePair<int, clipValues> thisClaim in claims)
                 {
                     if (!(thisClaim.Value.overlapping))
                     {
-                        Console.WriteLine(string.Format("Non-overlapping claim: {0} (@ {1},{2}: {3}x{4}){5}", thisClaim.Key, thisClaim.Value.x, thisClaim.Value.y, thisClaim.Value.width, thisClaim.Value.height, Environment.NewLine));
+                        Console.WriteLine("Non-overlapping claim: {0} (@ {1},{2}: {3}x{4}){5}", thisClaim.Key, thisClaim.Value.x, thisClaim.Value.y, thisClaim.Value.width, thisClaim.Value.height, Environment.NewLine);
                         Environment.Exit(0);
                     }
                 }

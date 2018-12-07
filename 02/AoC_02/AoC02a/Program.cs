@@ -10,7 +10,7 @@ namespace AoC02a
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -55,7 +55,7 @@ namespace AoC02a
                         tripleLetter++;
                     }
 
-                    Console.WriteLine(string.Format("Line {0}: {1}, {2}", count, hasDouble ? "double" : "no double", hasTriple ? "triple" : "no triple"));
+                    Console.WriteLine("Line {0}: {1}, {2}", count, hasDouble ? "double" : "no double", hasTriple ? "triple" : "no triple");
 
                     count++;
                 }
@@ -63,8 +63,8 @@ namespace AoC02a
 
                 checksum = doubleLetter * tripleLetter;
 
-                Console.WriteLine(string.Format("Doubles: {0}; Triples: {1}", doubleLetter, tripleLetter));
-                Console.WriteLine(string.Format("Checksum: {0}", checksum));
+                Console.WriteLine("Doubles: {0}; Triples: {1}", doubleLetter, tripleLetter);
+                Console.WriteLine("Checksum: {0}", checksum);
                 Console.WriteLine();
 
                 Environment.Exit(0);

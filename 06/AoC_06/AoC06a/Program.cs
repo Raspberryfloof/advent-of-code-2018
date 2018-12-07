@@ -11,7 +11,7 @@ namespace AoC06a
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -114,7 +114,7 @@ namespace AoC06a
                 {
                     if (edgeIndices.Contains(coords.IndexOf(c)))
                     {
-                        Console.WriteLine(string.Format("Point #{0} ({1},{2}): area was infinite (edge point)", coords.IndexOf(c), c.x, c.y));
+                        Console.WriteLine("Point #{0} ({1},{2}): area was infinite (edge point)", coords.IndexOf(c), c.x, c.y);
                         // skip; area is infinite
                     }
                     else
@@ -135,11 +135,11 @@ namespace AoC06a
                             greatestArea = count;
                             greatestIndex = coords.IndexOf(c);
                         }
-                        Console.WriteLine(string.Format("Point #{0} ({1},{2}): area = {3}", coords.IndexOf(c), c.x, c.y, count));
+                        Console.WriteLine("Point #{0} ({1},{2}): area = {3}", coords.IndexOf(c), c.x, c.y, count);
                     }
                 }
 
-                Console.WriteLine(string.Format("Greatest area = {3}, around point #{0} ({1},{2}){4}", greatestIndex, coords[greatestIndex].x, coords[greatestIndex].y, greatestArea, Environment.NewLine));
+                Console.WriteLine("Greatest area = {3}, around point #{0} ({1},{2}){4}", greatestIndex, coords[greatestIndex].x, coords[greatestIndex].y, greatestArea, Environment.NewLine);
                 Environment.Exit(0);
             }
             catch (Exception ex)

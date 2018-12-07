@@ -10,7 +10,7 @@ namespace AoC01b
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -49,17 +49,17 @@ namespace AoC01b
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(string.Format("Error parsing line #{0}:", count.ToString()));
+                        Console.WriteLine("Error parsing line #{0}:", count.ToString());
                         Console.WriteLine(ex.Message);
                     }
 
                     frequency += lineFreq;
-                    Console.WriteLine(string.Format("Line {0}: frequency change {1}, new frequency {2}", count, lineFreq, frequency));
+                    Console.WriteLine("Line {0}: frequency change {1}, new frequency {2}", count, lineFreq, frequency);
                     count++;
 
                     if (freqHistory.Contains(frequency))
                     {
-                        Console.WriteLine(string.Format("First match found: frequency {0}", frequency));
+                        Console.WriteLine("First match found: frequency {0}", frequency);
                         Environment.Exit(0);
                     }
                     else

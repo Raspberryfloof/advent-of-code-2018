@@ -11,7 +11,7 @@ namespace AoC05a
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -47,19 +47,19 @@ namespace AoC05a
                 uploRegex = new Regex(string.Join("|", uploReplacements));
 
                 finalPolymer = inputFile.ReadLine();
-                Console.WriteLine(string.Format("Initial polymer size: {0}", finalPolymer.Length));
+                Console.WriteLine("Initial polymer size: {0}", finalPolymer.Length);
 
                 do
                 {
                     input = finalPolymer;
                     finalPolymer = loupRegex.Replace(input, "");
                     finalPolymer = uploRegex.Replace(finalPolymer, "");
-                    Console.WriteLine(string.Format("After {0} reactions, size = {1}", count, finalPolymer.Length));
+                    Console.WriteLine("After {0} reactions, size = {1}", count, finalPolymer.Length);
                     count++;
                 } while (finalPolymer != input);
 
-                Console.WriteLine(string.Format("Final polymer:{0}{1}{2}", Environment.NewLine, finalPolymer, Environment.NewLine));
-                Console.WriteLine(string.Format("Final polymer length: {0}{1}", finalPolymer.Length, Environment.NewLine));
+                Console.WriteLine("Final polymer:{0}{1}{2}", Environment.NewLine, finalPolymer, Environment.NewLine);
+                Console.WriteLine("Final polymer length: {0}{1}", finalPolymer.Length, Environment.NewLine);
                 Environment.Exit(0);
             }
             catch (Exception ex)

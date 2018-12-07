@@ -11,7 +11,7 @@ namespace AoC02b
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -48,12 +48,12 @@ namespace AoC02b
                     var duplicates = checkIDs.GroupBy(id => id).Where(id => id.Count() > 1).Select(id => id.Key).ToList();
                     if ((duplicates == null) || (duplicates.Count < 1))
                     {
-                        Console.WriteLine(string.Format("Testing character {0}: no valid IDs found", count));
+                        Console.WriteLine("Testing character {0}: no valid IDs found", count);
                     }
                     else
                     {
-                        Console.WriteLine(string.Format("Testing character {0}: valid ID found!", count));
-                        Console.WriteLine(string.Format("Remaining characters: {0}", duplicates[0].ToString()));
+                        Console.WriteLine("Testing character {0}: valid ID found!", count);
+                        Console.WriteLine("Remaining characters: {0}", duplicates[0].ToString());
                         Environment.Exit(0);
                     }
                 }

@@ -12,7 +12,7 @@ namespace AoC04a
         {
             if (args.Length != 1)
             {
-                Console.WriteLine(string.Format("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)));
+                Console.WriteLine("Usage: {0} <input>", Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
                 Console.WriteLine("<input>: input file path");
                 Environment.Exit(-1);
             }
@@ -114,8 +114,8 @@ namespace AoC04a
                     }
                 }
 
-                Console.WriteLine(string.Format("Guard #{0} slept most at 00:{1,2:00} (was asleep {2} times)", currentGuard, minuteIndex, highestMinute));
-                Console.WriteLine(string.Format("Multiplied number: {0}{1}", currentGuard * minuteIndex, Environment.NewLine));
+                Console.WriteLine("Guard #{0} slept most at 00:{1,2:00} (was asleep {2} times)", currentGuard, minuteIndex, highestMinute);
+                Console.WriteLine("Multiplied number: {0}{1}", currentGuard * minuteIndex, Environment.NewLine);
                 Environment.Exit(0);
             }
             catch (Exception ex)
